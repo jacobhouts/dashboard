@@ -1,38 +1,97 @@
+
+body {
+  background-color: azure;
+  width: 1700px;
+  height: 900px;
+}
+
+
+
 .App {
-  text-align: center;
+  display: grid;
+  background-color: rgb(171, 177, 177);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 40px 25px;
+  position: absolute;
+  grid-template-areas: 
+  "sidebar header1 header2 header3"
+  "sidebar main main main"
+  "sidebar main main main";
+  padding: 90px;
+  border: 900px black thick;
+  border-style: ridge;
+  height: 70vh;
+  align-content: center;
+  left: 210px;
+  top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App :hover {
+  background-color: grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons {
+  grid-area: sidebar;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 650px;
+  width: 300px;
+  transition: all 0.1s ease 0.1s;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+#reviews {
+  grid-area: header1;
+  border: 900px black thick;
+  border-style: groove;
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reviews {
+  transition: all 0.1s ease 0.1s;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#ratings {
+  grid-area: header2;
+  border: 900px black thick;
+  border-style: groove;
+  height: 200px;
+}
+
+.average {
+  transition: all 0.1s ease 0.1s;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#analysis {
+  grid-area: header3;
+  border: 900px black thick;
+  border-style: groove;
+  height: 200px;
+}
+
+.sentiment {
+  transition: all 0.1s ease 0.1s;
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+
+#innervisitors{
+  grid-area: main;
+
+  height: 300px;
+  border: 9px black thick;
+  border-style: groove;
+}
+
+.visitors {
+  transition: all 0.1s ease 0.1s;
+  grid-column-start: 2;
+  grid-column-end: 5;
 }
